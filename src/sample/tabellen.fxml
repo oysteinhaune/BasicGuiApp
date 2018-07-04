@@ -2,16 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tabellenController">
    <children>
-      <Label layoutX="89.0" layoutY="49.0" text="Tabellen">
+      <Label layoutX="56.0" layoutY="47.0" text="Tabellen">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
       <Button layoutX="482.0" layoutY="545.0" mnemonicParsing="false" onAction="#objectButton" prefHeight="41.0" prefWidth="100.0" text="Gå til objektene" />
+      <TableView fx:id="tableView" layoutX="56.0" layoutY="88.0" prefHeight="403.0" prefWidth="483.0">
+        <columns>
+          <TableColumn fx:id="firstNameColumn" prefWidth="136.0" text="Fornavn" />
+          <TableColumn fx:id="lastNameColumn" prefWidth="162.0" text="Etternavn" />
+            <TableColumn fx:id="birthdayColumn" prefWidth="184.0" text="Bursdag" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
